@@ -15,8 +15,8 @@ import java.awt.*;
 /***********************************************************************************************************************
  * Author: Foster C. Williams
  * Program: JavaFX Quadratic formula calculator
- * Date: Saturday October 7th 2017
- * Version: 1.0
+ * Date: Saturday October 14th 2017
+ * Version 1.1
  */
 public class Main extends Application
 {
@@ -31,6 +31,7 @@ public class Main extends Application
     @Override
     public void start(Stage primaryStage) throws Exception
     {
+       primaryStage.setTitle("Fosters Quadratic Calculator!");
        Label directions = new Label("Please enter the variables A B and C for the quadratic formula");
        window = primaryStage;
        VBox grid = new VBox(20);
@@ -57,13 +58,19 @@ public class Main extends Application
 
        calc.setOnAction(e -> this.quadratic(a.getText(), b.getText(), c.getText()));
 
-       scene1 = new Scene(grid, 500, 500);
+       scene1 = new Scene(grid, 500, 300);
        window.setScene(scene1);
        window.show();
 
 
     }
 
+    /******************************************************************************************************************
+     *
+     * @param x - Equal to the x portion of the quadratic formula, String
+     * @param y - Equal to the x portion of the quadratic formula, String
+     * @param z - Equal to the x portion of the quadratic formula, String
+     */
     public static void quadratic(String x, String y, String z)
     {
         double a1, b1, c1;
